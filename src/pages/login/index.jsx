@@ -5,18 +5,18 @@ import { AuthContext } from "../../context";
 import { useNavigate } from "react-router-dom";
 
 function LoginPage() {
-  const { loginFormData, setLoginFormData, loginWithFireBase ,setLoading} = useContext(AuthContext);
+  const { loginFormData, setLoginFormData, loginWithFireBase, setLoading } =
+    useContext(AuthContext);
   const navigate = useNavigate();
-  function handleLoginOnSubmit(event){
+  function handleLoginOnSubmit(event) {
     event.preventDefault();
-    loginWithFireBase().then(result=>{
-        console.log(result, "result12345")
-        if(result) {
-            setLoading(false)
-            navigate('/profile');
-        }
-    })
-    
+    loginWithFireBase().then((result) => {
+      console.log(result, "result123");
+      if (result) {
+        setLoading(false);
+        navigate("/profile");
+      }
+    });
   }
 
   return (
@@ -35,5 +35,5 @@ function LoginPage() {
     </div>
   );
 }
- 
+
 export default LoginPage;

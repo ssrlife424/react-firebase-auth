@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, Navigate } from "react-router-dom";
 import ProfilePage from "./pages/profile";
 import LoginPage from "./pages/login";
 import RegisterPage from "./pages/register";
@@ -8,7 +8,10 @@ function App() {
   return (
     <div>
       <Routes>
-        <Route path="login" element={<LoginPage />} />
+        {/* Redirect from the root URL to the login page */}
+        <Route path="/" element={<Navigate to="/register" replace />} />
+        
+        <Route path="/login" element={<LoginPage />} />
         <Route path="/register" element={<RegisterPage />} />
         <Route
           path="/profile"

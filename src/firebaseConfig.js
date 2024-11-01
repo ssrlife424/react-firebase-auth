@@ -3,19 +3,22 @@ import {getAuth} from 'firebase/auth'
 
 
 
+// Define the Firebase configuration object
 const firebaseConfig = {
-    apiKey: "AIzaSyDijgrWXzW0XNH9r1ABnDbsZaC5HRXPcNo",
-    authDomain: "react-firebase-auth-2024-c7e7d.firebaseapp.com",
-    projectId: "react-firebase-auth-2024-c7e7d",
-    storageBucket: "react-firebase-auth-2024-c7e7d.appspot.com",
-    messagingSenderId: "631411001751",
-    appId: "1:631411001751:web:91f7689cb9b434eead9cd2",
-    measurementId: "G-7KDM6EM4CC"
-}
+    apiKey: import.meta.env.VITE_API_KEY,
+    authDomain: import.meta.env.VITE_AUTH_DOMAIN,
+    projectId: import.meta.env.VITE_PROJECT_ID,
+    storageBucket: import.meta.env.VITE_STORAGE_BUCKET,
+    messagingSenderId: import.meta.env.VITE_MESSAGING_SENDER_ID,
+    appId: import.meta.env.VITE_APP_ID,
+    measurementId: import.meta.env.VITE_MEASUREMENT_ID
+};
 
+// Initialize Firebase
 const app = initializeApp(firebaseConfig);
+
+// Get the Firebase Authentication instance
 const auth = getAuth(app);
 
-
-
+// Export the auth instance for use in your application
 export default auth;
