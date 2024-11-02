@@ -72,14 +72,5 @@ Sign Up: Register as a new user.
 
 Password Security: Ensure secure access with strong password policies.
 
-📚 Contributing
-Contributions are welcome! Please fork the repository and submit a pull request with your changes. For major changes, open an issue first to discuss what you would like to change.
-
-📄 License
-This project is licensed under the MIT License. See the LICENSE file for details.
-
-🙌 Acknowledgements
-Thanks to all the open-source contributors and libraries that make this project possible.
-
 Special shoutout to the Firebase team for their robust authentication services.
 
